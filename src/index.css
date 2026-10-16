@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --hummit-bg: #121216;
+  --hummit-surface: rgba(30, 30, 38, 0.72);
+  --hummit-border: rgba(255, 255, 255, 0.1);
+  --hummit-amber: #F5B041;
+  --hummit-gold: #FFB300;
+  --hummit-coral: #FF5722;
+  --hummit-text: #F9F9FB;
+  --hummit-muted: #A0A0AB;
+}
+
+@layer base {
+  body {
+    background-color: #121216;
+    background-image:
+      radial-gradient(circle at 55% 32%, rgba(245, 176, 65, 0.14) 0%, rgba(255, 87, 34, 0.05) 38%, rgba(18, 18, 22, 0.98) 78%);
+    color: #F9F9FB;
+    font-family: 'Pretendard', 'Plus Jakarta Sans', 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.hummit-glass {
+  background: rgba(30, 30, 38, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hummit-glass-warm {
+  background: linear-gradient(145deg, rgba(38, 34, 42, 0.82), rgba(22, 21, 27, 0.88));
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  border: 1px solid rgba(245, 176, 65, 0.22);
+}
+
+.glass-panel {
+  background: rgba(30, 30, 38, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.amber-gradient-text {
+  background: linear-gradient(90deg, #FFE082 0%, #F5B041 48%, #FF5722 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.neon-gradient-text {
+  background: linear-gradient(90deg, #F5B041 0%, #FFB300 50%, #FF5722 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spin-slow 9s linear infinite;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(18, 18, 22, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(245, 176, 65, 0.28);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(245, 176, 65, 0.5);
+}
